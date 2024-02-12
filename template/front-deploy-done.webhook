@@ -1,0 +1,34 @@
+curl -X POST -H 'Content-type: application/json' --data '{
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Front 배포 완료",
+				"emoji": true
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"fields": [
+				{
+					"type": "mrkdwn",
+					"text": "*Target:* Production (AWS)"
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "image",
+					"image_url": "https://api.slack.com/img/blocks/bkb_template_images/placeholder.png",
+					"alt_text": "placeholder"
+				}
+			]
+		}
+	]
+}' https://hooks.slack.com/services/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
